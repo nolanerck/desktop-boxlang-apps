@@ -1,7 +1,7 @@
 var _btn = document.getElementById( "btnMusic" );
 _btn.addEventListener( "click", () => 
 {
-    getData( "http://127.0.0.1:60810/api_noFramework/listBands.bxm" );
+    getData( "http://127.0.0.1:60810/api_noFramework/listBands.bxm?soloActs" );
 });
 
 
