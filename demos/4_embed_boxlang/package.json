@@ -1,0 +1,25 @@
+{
+  "name": "FetchDemo",
+  "main": "./src/main.js",
+  "devDependencies": {
+      "@electron/packager": "^18.3.5",
+      "electromon": "^1.0.0",
+      "electron": "^34.0.2"
+  },
+  "scripts": {
+      "start": "electron .",
+      "start-debug": "electron --inspect=9229 .",
+      "watch": "npx electronmon .",
+      "watch-debug": "npx electromon --inspect=9229 .",
+      "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/BurningIcon.icns --prune=true --out=release-builds",
+      "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/BurningIcon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron App\""
+  },
+  "dependencies": {
+
+  },
+  "electronmon": {
+      "patterns": [
+          "!.git/**"
+      ]
+  }
+}
