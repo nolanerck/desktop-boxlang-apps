@@ -1,0 +1,6 @@
+<bx:set favoriteBands = [ "Depeche Mode", "Green Day", "7 Seconds", "Material Issue", "Lamb of God" "Touche Amore" ] />
+
+<bx:output>#favoriteBands#</bx:output>
+
+
+
