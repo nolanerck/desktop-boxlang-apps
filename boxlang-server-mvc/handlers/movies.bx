@@ -2,7 +2,8 @@
  * I am a new handler
  * Implicit Functions: preHandler, postHandler, aroundHandler, onMissingAction, onError, onInvalidHTTPMethod
  */
-class extends="coldbox.system.EventHandler"{
+class 
+extends="coldbox.system.EventHandler"{
 
 	this.prehandler_only 	= "";
 	this.prehandler_except 	= "";
@@ -16,7 +17,7 @@ class extends="coldbox.system.EventHandler"{
 	 * list
 	 */
 	function list( event, rc, prc ){
-
+		event.setView( "movies/list" );
 	}
 
 

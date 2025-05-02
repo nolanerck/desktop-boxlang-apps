@@ -1,3 +1,10 @@
 <bx:output>
-<h1>books.list</h1>
+    <h1>Books!</h1>
+
+    <ul>
+        <li>Fargo Rock City - Chuck Klosterman</li>
+        <li>High Fidelity - Nick Hornby</li>
+        <li>The Cuckoo's Egg - Cliff Stoll</li>
+    </ul>
+
 </bx:output>

@@ -1,3 +1,14 @@
 <bx:output>
-<h1>movies.list</h1>
+    <h1>Movies!</h1>
+
+    <ul>
+        <li>Sneakers</li>
+        <li>Singles</li>
+        <li>Some Kind of Wonderful</li>
+        <li>Repo Man</li>
+        <li>North Shore</li>
+        <li>Rad</li>
+        <li>Gleaming The Cube</li>        
+    </ul>
+
 </bx:output>

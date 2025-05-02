@@ -1,3 +1,11 @@
 <bx:output>
-<h1>music.list</h1>
+
+<h1>Music!</h1>
+<ul>
+    <li>Deftones</li>
+    <li>Far</li>
+    <li>7 Seconds</li>
+    <li>Cake</li>
+    <li>Deathray</li>
+</ul>
 </bx:output>

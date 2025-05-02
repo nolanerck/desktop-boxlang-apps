@@ -1,3 +1,12 @@
 <bx:output>
-<h1>games.list</h1>
+    <h1>Games!</h1>
+
+    <ul>
+        <li>BurgerTime</li>
+        <li>Tony Hawk Pro Skater</li>
+        <li>Zork</li>
+        <li>SimPark</li>
+        <li>Star Wars Rogue Squadron</li>
+    </ul>
+
 </bx:output>
