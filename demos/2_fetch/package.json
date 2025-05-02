@@ -1,5 +1,5 @@
 {
-  "name": "HelloWorldElectron",
+  "name": "FetchDemo",
   "main": "./src/main.js",
   "devDependencies": {
       "@electron/packager": "^18.3.5",

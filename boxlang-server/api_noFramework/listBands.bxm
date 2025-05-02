@@ -1,6 +1,21 @@
-<bx:set favoriteBands = [ "Depeche Mode", "Green Day", "7 Seconds", "Material Issue", "Lamb of God" "Touche Amore" ] />
+<bx:script>
+    favoriteBands = [ "Depeche Mode", 
+                      "Green Day", 
+                      "7 Seconds", 
+                      "Material Issue", 
+                      "The Mountain Goats",
+                      "Sunny Day Real Estate",
+                      "Lamb of God", 
+                      "Touche Amore",
+                      "The Eels" ];
 
-<bx:output>#favoriteBands#</bx:output>
+    if( isDefined( "url.soloActs" ) )
+    {
+        favoriteBands.append( "David Bowie" );
+        favoriteBands.append( "John Mayer" );
+        favoriteBands.append( "Dave Hause" );
+    }
+</bx:script>
 
-
+<bx:output>#jsonSerialize( favoriteBands )#</bx:output>
 

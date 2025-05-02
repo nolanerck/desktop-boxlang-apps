@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Powering Desktop apps with BoxLang</title>
+		<title>Powering Desktop Apps With BoxLang</title>
 
 		<link rel="stylesheet" href="./revealjs-dist/reset.css" />
         <link rel="stylesheet" href="./revealjs-dist/reveal.css" />
@@ -14,9 +14,9 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>Powering Desktop apps with BoxLang</h2>
+					<h2>Powering Desktop Apps With BoxLang</h2>
 					<p class="centered">Nolan Erck</p>
-					<p class="centered">South of Shasta Consulting</p>
+					<p class="centered">South of Shasta</p>
 				</section>
 
 				<section>
@@ -52,9 +52,9 @@
 					<ul>
                         <li>What is Electron?</li>
                         <li>Getting Started</li>
+                        <li>Talking to BoxLang</li>
+                        <li>Real World Electron Apps</li>
                         <li>Building and Signing</li>
-                        <li>Talking to a back-end</li>
-                        <li>Other resources</li>
 					</ul>
 				</section>
 
@@ -64,8 +64,245 @@
                         <li>Make desktop apps w/ HTML & JavaScript</li>
                         <li>Windows and Mac, not mobile</li>
                         <li>ala PhoneGap / Ionic, but for desktop</li>
+                        <li>Node.js support built-in</li>
+                        <li>Chromium browser</li>
                     </ul>
                 </section>
+
+                <section>
+                    <h2>Getting Started</h2>
+                    <ul>
+                        <li>npm install electron --save-dev</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Electron in 3 Parts</h2>
+                    <ul>
+                        <li>Renderer</li>
+                        <li>Main</li>
+                        <li>Preload</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Renderer</h2>
+                    <ul>
+                        <li>Front-end</li>
+                        <li>HTML, JavaScript, CSS</li>
+                        <li>Stuff that shows up in the UI</li>
+                        <li>Your "view" layer"</li>
+                        <li>Can install any JS</li>
+                        <li>npm install just like always</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Main</h2>
+                    <ul>
+                        <li>Back-end</li>
+                        <li>Node.js (and / or BoxLang)</li>
+                        <li>Server-side, OS, System calls, File IO, etc</li>
+                        <li>Your "model" and "service" stuff</li>
+                        <li>Can install any Node.js packages</li>
+                        <li>npm install just like always</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Preload</h2>
+                    <ul>
+                        <li>Connect back-end to front-end</li>
+                        <li>Your "controller" layer, sort of</li>
+                        <li>For passing Node to the front-end</li>
+                        <li>Optional w/ BoxLang but:
+                            <br>
+                            try to use good OOP design
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Use Any JavaScript Stuff</h2>
+                    <ul>
+                        <li>Vanilla JS</li>
+                        <li>Web Components</li>
+                        <li>Vue.js, React, etc<br>
+                            <em>(build steps are needed)</em>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>Demo Time!</section>
+
+                <section>Hello World<br>(demo 1)</section>
+
+                <section>Electron and BoxLang<br>(demo 2)</section>
+
+				<section data-background-image="./images/real-artists-ship.png" data-background-size="contain">
+				</section>
+
+                <section>
+                    <h2>Debugging</h2>
+                    <ul>
+                        <li>npm install electromon --save-dev</li>
+                        <li>Renderer - browser "console" tab</li>
+                        <li>Main - server console</li>
+                        <li>BoxLang - server log files, console output, etc</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Real-World Electron Apps</h2>
+                </section>
+
+                <section data-background-image="./images/vs-code-screenshot.png" data-background-size="contain">
+                    <h2>VS Code</h2>
+                </section>
+
+                <section data-background-image="./images/todoist-screenshot.png" data-background-size="contain">
+                    <h2>Todoist</h2>
+                </section>
+
+				<section data-background-image="./images/boxlang-admin-2.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="./images/1010music_bitboxv2.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="./images/1010music_blackbox.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="./images/1010music_tangerine.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background-image="./images/1010music-preset-maker-ui-sample.png" data-background-size="contain">
+				</section>
+
+                <section>Desktop App Weird Stuff</section>
+
+                <section>
+                    <h2>Building The App</h2>
+                    <ul>
+                        <li>npm install @electron/packager
+                            <br>
+                            or
+                            npm install electron-forge
+                        </li>
+                        <li>packageer - more "lightweight"</li>
+                        <li>elecron-forge - more features for updatng, builds, publishing, etc
+                            <br>
+                            ...but makes larger binaries, can be slower
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Building The App</h2>
+                    <ul>
+                        <li>npm run package-mac</li>
+                        <li>npm run package-win</li>
+                        <li>Can make <em>both</em> Windows and Mac intel binaries on a Mac machine!</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Copy Protection</h2>
+                    <ul>
+                        <li>Maybe needed, maybe not</li>
+                        <li>YMMV</li>
+                        <li>SaaS Client App: User Authentication</li>
+                        <li>Pure desktop: several options, free or paid<br>
+                            Can also roll your own
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Selling Your App</h2>
+                    <ul>
+                        <li>Desktop App, not mobile</li>
+                        <li>App Store isn't required
+                            <ul>
+                                <li>But signing the app is required for this</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>App Signing</section>
+
+                <section>
+                    <h2>App Signing</h2>
+                    <ul>
+                        <li>Required for Apple and MicroSoft Stores</li>
+                        <li>Optional for downloads on your website<br>but...</li>
+                    </ul>
+                </section>
+
+				<section data-background-image="./images/apple-unverified-warning.png" data-background-size="contain">
+				</section>
+
+				<section data-background-image="./images/windows-unverified-warning.jpg" data-background-size="contain">
+				</section>
+
+                <section>
+                    <h2>App Signing - Apple</h2>
+                    <ul>
+                        <li>Pretty easy</li>
+                        <li>Make Apple Developer Account</li>
+                        <li>developer.apple.com</li>
+                        <li>Download XCode
+                            <br>
+                            (If it fails, reboot, wait a day, try again)
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>App Signing - Microsoft</h2>
+                    <ul>
+                        <li>Extremely Painful!</li>
+                        <li>3rd Party Cert
+                            <ul>
+                                <li>DigiCert, GlobalSign, a few others</li>
+                                <li>~$30 to $100 monthly</li>
+                            </ul>
+                        </li>
+                        <li>Azure Key Signing (new)
+                            <ul>
+                                <li>Cheaper, but if you've been in business 3+ years</li>
+                            </ul>
+                        </li>
+                        <li><em>Must</em> store in encrypted key store</li>
+                        <li>Budget 2 - 4 weeks</li>
+                    </ul>
+                </section>
+
+				<section>
+					<h2>Creating in 30 minutes a day</h2>
+				</section>
+
+                <section>
+                    <h2>Other Resources</h2>
+                    <ul>
+                        <li>South of Shasta</li>
+                        <li>electronjs.org</li>
+                        <li>YouTube tutorials</li>
+                    </ul>
+                </section>
+
+				<section>
+					<h2>Questions? Comments?<br />Need consulting help?</h2>
+					<ul>
+						<li>southofshasta.com</li>
+						<li>nolan@southofshasta.com</li>
+						<li>Twitter: @southofshasta</li>
+						<li>Github: nolanerck</li>
+					</ul>
+					<p class="centered">github.com/nolanerck/modern-cfml-demos</p>
+					<p class="centered">Thanks!</p>
+				</section>
 
 			</div>
 		</div>
